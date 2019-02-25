@@ -1,0 +1,34 @@
+Created by: Rutvik Patel
+Email: rutvik@ualberta.ca
+-------------------------------------------------
+Included files:
+    * main.cpp
+    * multiply.cpp
+    * transpose.cpp
+    * util.cpp
+    * util.h
+    * Makefile
+    * README
+
+Running Instructions:
+    In order to correctly run this program, you must navigate to the correct directory in your terminal, and use the comman 'make' to build the project and execute the program.
+
+Makefile Targets:
+  * make (build): Builds the project
+  * make main.o : compiles main.cpp into its respective object (.o) file
+  * make clean  : removes the .o and executable files in the source directory
+  * make help   : prints out information about these targets
+
+How to use:
+    There are two modes in this program to handle matrix operations, you may press T or M in order to access transpose and multiplication modes respectively.
+
+    In transpose mode:
+      The user will be asked to enter the dimensions of the matrix the user wishes to transpose. Once the dimensions are entered, user will be prompted to enter the elements of the matrix, row by row. Once the elements are entered, the transpose will be calculated and displayed to the screen.
+
+    In multiplication mode:
+      The user will be asked to enter the dimensions of both matrices involved in the operation. If the dimension don't comply with basic matrix multiplication rules (columns of first matrix must match the rows of the second matrix), the user will be asked to enter the dimensions again. Once the dimensions agree, the user will have to enter the elements into each matrix, row by row. The two matrices will then be multiplied together and the result will be displayed to the screen.
+
+Notes and Assumptions:
+    
+
+Known Bugs:
