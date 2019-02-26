@@ -29,6 +29,9 @@ How to use:
       The user will be asked to enter the dimensions of both matrices involved in the operation. If the dimension don't comply with basic matrix multiplication rules (columns of first matrix must match the rows of the second matrix), the user will be asked to enter the dimensions again. Once the dimensions agree, the user will have to enter the elements into each matrix, row by row. The two matrices will then be multiplied together and the result will be displayed to the screen.
 
 Notes and Assumptions:
+  The program assumes that the user will enter only integer values when passing in the elements of the given array. The program will overflow and clash when a non-integer value is passed into the elements portion of an array.
     
 
 Known Bugs:
+- infinite loop when entering a non-number value into the rows or columns input line
+- overflow when doing transpose operations with certain dimension matrices.

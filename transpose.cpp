@@ -1,7 +1,18 @@
+/*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Created by: Rutvik Patel
+E-mail: rutvik@ualberta.ca
+Personal Site: https://patel-rutvik.github.io
+
+This program demonstrates the implementation of a basic matrix transpose and
+multiplier program.
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*/
 #include <stdio.h>
 #include <iostream>
 #include "util.cpp"
-
+#include <ctype.h>
+#include <stdlib.h>
 using namespace std;
 
 void transpose()
@@ -9,51 +20,31 @@ void transpose()
     long int rows = 0, columns = 0;
     cout << "Please enter the dimensions of your matrix" << endl;
     cout << "rows: ";
-    cin >> rows;
-    while (rows < 1) 
+
+    while (!(cin >> rows))
     {
-        // bug where if you enter the letter Q, infinite loop...
-        // can we check what type is entered?
-        cout << "Please enter a valid number of rows..." << endl;
+        cin.clear();
+        cin.ignore(999, '\n');
+        cout << endl << "Please enter a valid number of rows..." << endl;
         cout << "rows: ";
-        cin >> rows;
     }
     cout << "columns: ";
-    cin >> columns;
-    while (columns < 1) 
+
+    while (!(cin >> columns))
     {
-        // bug where if you enter the letter Q, infinite loop...
-        // see if we can check what type is entered???
+        cin.clear();
+        cin.ignore(999, '\n');
         cout << "Please enter a valid number of columns..." << endl;
         cout << "columns: ";
-        cin >> columns;
     }
     long int mat[rows][columns], trans[columns][rows];
     cout << "Please enter the values (row by row): " << endl;
     getMatrix(mat[0], rows, columns);
-    /*
-    for (int i = 0; i < rows; i++)
-    {
-        cout << "row " << i + 1 << ": ";
-        for (int j = 0; j < columns; j++)
-        {
-            cin >> mat[i][j];
-        }
-    }
-    */
-    cout << "The elements entered into the " << rows << " x " << columns << " matrix are: " << endl;
+
+    cout << "The elements entered into the " << rows << " x " << columns <<
+            " matrix are: " << endl;
 
     printMatrix(mat[0], rows, columns);
-    /*
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            cout << mat[i][j] << " ";
-        }
-        cout << endl;
-    }
-    */
 
     for (int i = 0; i < rows; i++)
     {
@@ -63,17 +54,7 @@ void transpose()
         }
     }
 
-    cout << "The resulting " << columns << " x " << rows << " transpose is: " << endl;
+    cout << "The resulting " << columns << " x " << rows <<
+            " transpose is: " << endl;
     printMatrix(trans[0], columns, rows);
-    /*
-    for (int i = 0; i < columns; i++)
-    {
-        for (int j = 0; j < rows; j++)
-        {
-            cout << trans[i][j] << " ";
-        }
-        cout << endl;
-    }
-    */
-    
 }
