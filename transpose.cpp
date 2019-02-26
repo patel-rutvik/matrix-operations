@@ -8,12 +8,7 @@ This program demonstrates the implementation of a basic matrix transpose and
 multiplier program.
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 */
-#include <stdio.h>
-#include <iostream>
 #include "util.cpp"
-#include <ctype.h>
-#include <stdlib.h>
-using namespace std;
 
 void transpose()
 {

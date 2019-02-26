@@ -9,8 +9,6 @@ multiplier program.
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 */
 #include "util.h"
-#include <cctype>
-
 
 void getMode()
 {

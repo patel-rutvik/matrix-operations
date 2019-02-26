@@ -10,8 +10,6 @@ multiplier program.
 */
 #include "multiply.cpp"
 
-using namespace std;
-
 
 int main()
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

@@ -8,7 +8,6 @@ This program demonstrates the implementation of a basic matrix transpose and
 multiplier program.
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 */
-#include <stdio.h>
 #include "transpose.cpp"
 
 
@@ -97,6 +96,8 @@ ming matrix multiplication.
     getMatrix(mat2[0], rows2, columns2);
 
     // Initializing elements of 2D array to 0, to avoid overflow.
+    /* Modified implementation from the site:
+    https://www.programiz.com/cpp-programming/examples/matrix-multiplication */
     for (int i = 0; i < rows1; ++i)
     {
         for (int j = 0; j < columns2; ++j)
@@ -106,6 +107,8 @@ ming matrix multiplication.
     }
 
     // Multiplying matrix a and b and storing in a 2D array
+    /* This is a modified implementation from the site:
+    https://www.programiz.com/cpp-programming/examples/matrix-multiplication */
     for (int i = 0; i < rows1; ++i)
     {
         for (int j = 0; j < columns2; ++j)

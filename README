@@ -1,7 +1,7 @@
 Created by: Rutvik Patel
 Email: rutvik@ualberta.ca
--------------------------------------------------
-Included files:
+-------------------------------------------------------------------------------
+Included project files:
     * main.cpp
     * multiply.cpp
     * transpose.cpp
@@ -11,7 +11,7 @@ Included files:
     * README
 
 Running Instructions:
-    In order to correctly run this program, you must navigate to the correct directory in your terminal, and use the comman 'make' to build the project and execute the program.
+    In order to correctly run this program, you must navigate to the correct directory in your terminal, and use the command 'make' to build the project and execute the program.
 
 Makefile Targets:
   * make (build): Builds the project
@@ -22,16 +22,26 @@ Makefile Targets:
 How to use:
     There are two modes in this program to handle matrix operations, you may press T or M in order to access transpose and multiplication modes respectively.
 
-    In transpose mode:
+    Transpose mode:
       The user will be asked to enter the dimensions of the matrix the user wishes to transpose. Once the dimensions are entered, user will be prompted to enter the elements of the matrix, row by row. Once the elements are entered, the transpose will be calculated and displayed to the screen.
 
-    In multiplication mode:
+    Multiplication mode:
       The user will be asked to enter the dimensions of both matrices involved in the operation. If the dimension don't comply with basic matrix multiplication rules (columns of first matrix must match the rows of the second matrix), the user will be asked to enter the dimensions again. Once the dimensions agree, the user will have to enter the elements into each matrix, row by row. The two matrices will then be multiplied together and the result will be displayed to the screen.
 
+    When entering the values of the matrix (row by row), make sure you enter space separated values. Following this example:
+      User wants to enter the 2 x 3 matrix [1 2 3; 4 5 6]. Input elements should look like:
+      row 1 of 2: 1 2 3
+      row 2 of 2: 4 5 6
+
+
 Notes and Assumptions:
-  The program assumes that the user will enter only integer values when passing in the elements of the given array. The program will overflow and clash when a non-integer value is passed into the elements portion of an array.
+  * The included files follow PEP8 style and convention. 
+  * Not all the code is purely written by myself. All modified implementations in the files have been cited in the comments. 
+  * The program assumes that the user will enter only integer values when passing in the elements of the given array. The program will either be stuck in an infinite loop, overflow, or crash when a non-integer value is passed into the elements portion of an array. 
+  * Please use the command 'CTRL+C' to kill the program at any time in the command line.
     
 
 Known Bugs:
-- infinite loop when entering a non-number value into the rows or columns input line
-- overflow when doing transpose operations with certain dimension matrices.
+  * If a non-integer value is entered into the elements of an array, the program will be stuck in an infinite loop, overflow, crash, or all the above.
+
+  If any others are found feel free to contact me with suggestions so I can improve this program!
